@@ -1,0 +1,29 @@
+/**
+ * This program is the section of the code from CarV5 that did all the calcuations for the Mileage, MPG, GPM and total cost of the trip. 
+ *
+ * @author Annabel Hartmann
+ * @version 11/29/2017
+ */
+public class CarV7{
+    private double driveCost, mPG, gUsed, pPG, distance;
+    private int eMiles, sMiles;
+    
+    public CarV7() { //default constructor
+    } 
+        
+    public int calcMileage( int eMiles, int sMiles){ //calculate the distance between the start and end miles
+        return eMiles - sMiles;
+    }
+    
+    public double calcMPG(double distance, double gUsed){ //calculate the miles per gallon
+        return distance / gUsed; 
+    }
+    
+    public double calcGPM(double gUsed, double distance){ //calculate the miles per gallon
+        return gUsed / distance; 
+    }
+  
+    public double totalCost(double gUsed, double pPG) { //calculate the price of the gallons of gas used
+        return gUsed * pPG;
+    } //When the total cost is printed it will print 0.0 unless I add double gUsed and double pPG
+}
