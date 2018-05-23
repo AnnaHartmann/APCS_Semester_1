@@ -1,0 +1,62 @@
+/**
+ * This is code so that way I can initalize and use pi along with computing the possibly of darts hitting a board! This code is in a top down format and uses iterations correctly.
+ *
+ * @author Annabel Hartmann
+ * @version 11/13/17
+ */
+
+import java.util.Scanner;
+public class Darts {
+    public static Scanner in = new Scanner(System.in);
+    
+    public static double x = (2 * Math.random() - 1);
+    public static double y = (2 * Math.random() - 1);
+    public static double r = 1.0;
+    public static double xNum, yNum;
+    public static double hitNum;
+    public static double pi = 3.14159265359;
+    public static double total;
+    public static int throwNum, trial;
+    
+    public static int numOfHit(double x, double y, int trail) {
+        hitNum = 0;
+
+        for (int a = 1; a < trail; a++) {
+            x = (2 * Math.random() - 1);
+            y = (2 * Math.random() - 1);
+
+            if ((Math.pow(x, 2) + Math.pow(y, 2)) <= (Math.pow(r, 2))) {
+                hitNum++;
+            }
+        }
+        return (int) hitNum;
+    }
+    
+    public static double mathPi(double hitNum, double throwNum){
+        return ( pi * (hitNum) / throwNum);
+    }
+    
+    public static void main (String[] args){
+        System.out.println("~Welcome to the dart throwing game!~");
+        System.out.println("> I am your character Rory!");
+        System.out.println("> What's your name?"); 
+        String name = in.nextLine();
+        System.out.println("> Hello " + name + "! Let's begin!");
+        System.out.println("> Tell me, how many times should these darts be thrown? :D");
+        throwNum = in.nextInt();
+        
+        System.out.println("> Alrighty well how many times should I do this?");
+        trial = in.nextInt();
+        
+        for (int a = 0; a < trial; a++) {
+            int numOfHit = numOfHit(x,y,throwNum);
+            double possiblePi = mathPi(numOfHit,throwNum);  
+            total += possiblePi;
+            System.out.printf("Trial [" + (a + 1) + "]: pi =  %2f\n", possiblePi);
+        }
+        double avgPi = (total/trial);
+        System.out.printf("Estimate of pi = %1.6f", avgPi);
+        System.out.println();
+        System.out.println("Thank you for playing~! I hope you have a great day!");
+    }
+}
