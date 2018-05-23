@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=MeasurementConverterV2
+comment0.text=\r\n\ This\ program\ is\ to\ convert\ English\ units\ of\ measurement\ to\ that\ of\ the\ metric\ units.\ I\ do\ this\ by\ using\ printf\ statements,\ arithmetic\ expressions\ and\ static\ methods.\ \r\n\ \r\n\ @author\ Annabel\ Hartmann\ \r\n\ @version\ 11/8/2017\r\n
+comment1.params=
+comment1.target=void\ printPurpose()
+comment10.params=args
+comment10.target=void\ main(java.lang.String[])
+comment2.params=ft
+comment2.target=double\ convertFeetToMiles(double)
+comment3.params=mi
+comment3.target=double\ convertMilesToFeet(double)
+comment4.params=mi
+comment4.target=double\ convertMilesToKilometers(double)
+comment5.params=km
+comment5.target=double\ convertKilometersToMiles(double)
+comment6.params=lb
+comment6.target=double\ convertPoundsToKilograms(double)
+comment7.params=kg
+comment7.target=double\ convertKilogramsToPounds(double)
+comment8.params=gl
+comment8.target=double\ convertGallonsToLiters(double)
+comment9.params=li
+comment9.target=double\ convertLitersToGallons(double)
+numComments=11
