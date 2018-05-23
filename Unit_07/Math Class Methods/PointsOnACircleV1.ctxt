@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=PointsOnACircleV1
+comment0.text=\r\n\ This\ code\ is\ meant\ to\ print\ out\ a\ sequence\ of\ (x,\ y)\ points\ using\ math\ language\ along\ with\ using\ for\ loops\ and\ printf\ statements.\ \r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 11/7/17\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
