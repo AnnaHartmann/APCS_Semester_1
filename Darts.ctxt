@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Darts
-comment1.params=x\ y\ trail
-comment1.target=int\ numOfHit(double,\ double,\ int)
-comment2.params=hitNum\ throwNum
-comment2.target=double\ mathPi(double,\ double)
-comment3.params=args
-comment3.target=void\ main(java.lang.String[])
-numComments=4
