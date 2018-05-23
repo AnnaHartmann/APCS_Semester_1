@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=AnnualFuelUse
+comment0.text=\r\n\ This\ code\ is\ filled\ with\ the\ calculations\ made\ for\ the\ Annual\ Fuel\ Output\ code.\ This\ code\ uses\ static\ methhods\ and\ min\ and\ max\ variable\ calculations.\r\n\ \r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 11/30/17\r\n
+comment1.params=fillNumber\ endMile\ startMile\ gUsed\ priceGal
+comment1.target=AnnualFuelUse(int,\ double,\ double,\ double,\ double)
+comment2.params=
+comment2.target=double\ calculateMileage()
+comment3.params=
+comment3.target=double\ calculateMPG()
+comment4.params=
+comment4.target=double\ calculateCost()
+comment5.params=minMaxVariable
+comment5.target=double\ min(double[])
+comment6.params=minMaxVariable
+comment6.target=double\ max(double[])
+comment7.params=totalVariable
+comment7.target=double\ totalOf(double[])
+comment8.params=days\ annualVariable
+comment8.target=double\ annualProjection(double[],\ double)
+numComments=9

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=AnnualFuelUseTester
+comment0.text=\r\n\ This\ program\ is\ the\ other\ part\ of\ the\ Annual\ Fuel\ Use.\ It\ uses\ doubles,\ ints,\ static\ methods,\ arrays\ and\ printf\ statements.\r\n\ \r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 11/30/17\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
