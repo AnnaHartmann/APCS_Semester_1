@@ -1,0 +1,104 @@
+/**
+ * The purpose of this program is to print the results of a heat index, temperature and humidity of Ket West, Florida using arrays, printf and for-each loops.
+ *
+ * @author Annabel Hartmann
+ * @version 11/1/2017
+ */
+
+import java.io.IOException;
+import java.io.File;
+import java.util.Scanner;
+public class HeatIndex
+{
+ static void main(String[] args) throws IOException {
+    
+    File fileTemp = new File("KeyWestTemp.txt");
+    File fileHumid = new File("KeyWestHumid.txt");
+    String location = "Key West, Florida";
+    Scanner temperatureFile = new Scanner(fileTemp);
+    Scanner humidityFile = new Scanner(fileHumid);
+    
+    String[] months = {"                Jan  ", "Feb  ", "Mar", "Apr", "May  ", "  June ", "July ", "Aug  ", "Sep  ", "Oct  ", "Nov  ", "Dec  "};
+    int length = months.length;
+    double[] temperature = new double[length];
+    double[] heatIndex = new double[length];
+    int[] humidity = new int[length];
+    double sumTemp = 0.0;
+    double sumHI = 0.0;
+    int sumHumid = 0;
+    double t = 0.0;
+    int h = 0;
+        
+    int a = 0;
+    while (temperatureFile.hasNextDouble()) { //KeyWest Temperature File 
+          temperature[a] = temperatureFile.nextDouble();
+          a++;
+    }
+    temperatureFile.close(); // CLOSE KeyWest Temperature File
+    
+    a = 0;
+    while(humidityFile.hasNextInt()){ //KeyWest Humidity File
+         humidity[a] = humidityFile.nextInt();
+         a++;
+    }
+    humidityFile.close(); //CLOSE KeyWest Humidity File
+    
+    for (a=0; a < temperature.length; a++){ //Heat Index Initiation
+        if (temperature[a] >= 80.0) {
+            t = temperature[a];
+            h = humidity[a];
+            
+            heatIndex[a] = -42.379 + 2.04901523*t + 10.14333127*h - .22475541*t*h - .00683783*t*t - .05481717*h*h + .00122874*t*t*h + .00085282*t*h*h - .00000199*t*t*h*h;
+        }
+        else{
+            heatIndex[a] = temperature[a];
+        }
+    }
+    
+    for (a = 0; a < temperature.length; a++) { //Sum Temperature
+        sumTemp += temperature[a];
+    }
+    for (a = 0; a < humidity.length; a++) { //Sum Humidty
+        sumHumid += humidity[a];
+    }
+    for (a = 0; a < humidity.length; a++) { //Sum Humidty
+        sumHI += heatIndex[a];
+    }
+    double avgTemp = sumTemp / temperature.length; //Average Temperature
+    int avgHum = sumHumid / humidity.length; //Average Humidity
+    double avgHI= sumHI / heatIndex.length;
+    
+    //Output for code
+    System.out.printf("                                                                     Heat Index: %5s \n", location);
+    System.out.println();
+    System.out.println("                                                                              -Months-");
+    
+    for (String m: months){
+        System.out.printf("%6s    ", m);
+    }
+    
+    System.out.println("Average");
+    System.out.println("~------------------------------------------------------------------------------------------------------------------------------------------------------------~");
+    System.out.print("Temperature(F)  ");
+    
+    for (double temp : temperature) {
+            System.out.printf("%.1f      ", temp);
+        }
+    System.out.printf("  %.1f", avgTemp);
+    System.out.println();
+    
+    System.out.print("Humidity (%)   ");
+    
+    for (int humid : humidity) {
+            System.out.printf("%5d     ", humid);
+        }
+    System.out.printf("     %d      ", avgHum);
+    System.out.println();
+    System.out.print("Heat Index (F)  ");
+    
+    for (double HI : heatIndex) {
+            System.out.printf("%.1f      ", HI);
+        }
+    System.out.printf("  %.1f", avgHI);
+ }
+}
