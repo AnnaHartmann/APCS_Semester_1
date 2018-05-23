@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=CarV3
+comment0.text=\r\n\ This\ program\ is\ to\ show\ the\ type\ of\ car,\ miles\ per\ gallon,\ cost\ of\ the\ drive,\ price\ per\ gallon,\ gallons\ used,\ distance\ amd\ the\ start\ and\ end\ mileage.\ \r\n\ This\ program\ uses\ constructors,\ static\ methods,\ a\ main\ method\ and\ printf\ statements.\r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 11/26/2017\r\n
+comment1.params=
+comment1.target=CarV3()
+comment2.params=sMiles\ eMiles
+comment2.target=double\ calcMileage(double,\ double)
+comment3.params=distance\ gUsed
+comment3.target=double\ calcMPG(double,\ double)
+comment4.params=gUsed\ pPG
+comment4.target=double\ calcPrice(double,\ double)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6
