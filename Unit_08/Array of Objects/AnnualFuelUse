@@ -1,0 +1,67 @@
+/**
+ * This code is filled with the calculations made for the Annual Fuel Output code. This code uses static methhods and min and max variable calculations.
+ * 
+ * @author Annabel Hartmann
+ * @version 11/30/17
+ */
+public class AnnualFuelUse
+{
+    double gallonsUsed, pricePerGallon, sM, eM;
+
+    AnnualFuelUse(int fillNumber, double endMile, double startMile, double gUsed, double priceGal){ //Initialze variables
+        sM = startMile;
+        eM = endMile;
+        gallonsUsed = gUsed;
+        pricePerGallon = priceGal;
+    }
+
+    public double calculateMileage(){ //Calculations of Mileage
+        return eM - sM;
+    }
+
+    public double calculateMPG(){ //Calculate MPG
+        return calculateMileage() / gallonsUsed;
+    }
+
+    public double calculateCost(){ //Calculate the total Cost
+        return pricePerGallon * gallonsUsed;
+    }
+
+    public static double min(double minMaxVariable[]){ //Calculation of min variable
+        Double minVariable = Double.MAX_VALUE;
+        for(int i = 0; i < minMaxVariable.length; i++){
+            if (minMaxVariable[i] < minVariable)
+            {
+                minVariable = minMaxVariable[i];
+            }
+        }
+        return minVariable;
+    }
+
+    public static double max(double minMaxVariable[]){//Calculation of max variable
+        Double maxVariable = Double.MIN_VALUE;
+        for(int i = 0; i < minMaxVariable.length; i++){
+            if(minMaxVariable[i] > maxVariable)
+            {
+                maxVariable = minMaxVariable[i];
+            }
+        }
+        return maxVariable;
+    }
+
+    public static double totalOf(double totalVariable[]){ //Calculation of total value
+        double totalValue = 0;
+        for(double newValue : totalVariable){
+            totalValue += newValue;
+        }
+        return totalValue;
+    }
+
+    public static double annualProjection(double days[], double annualVariable){//Calculation of annual value
+        double totalValue = 0;
+        for(double newValue : days){
+            totalValue += newValue;
+        }
+        return 365 / (totalValue - 1) * annualVariable;
+    }
+}
