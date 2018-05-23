@@ -1,0 +1,35 @@
+/**
+ * This class is meant to initliaze the array variables for velocity and degree, calculate the distance using .sin and .toRadians along with 
+ * create how the array information will be printed. 
+ *
+ * @author Annabel Hartmann
+ * @version 12/14/17
+ */
+public class Catapult {
+    private int [] velocity, degree; //generalized variables for velocity and degree
+    private double [][] d; //this is the specified variable for distance 
+    
+    public Catapult(int[] velocity, int [] degree){ //this code is to initialize the variables in a format so it can be called later
+        d = new double [velocity.length] [degree.length];
+        this.velocity = velocity;
+        this.degree = degree; 
+    }
+    
+    public void calculateDistance(){ //calculate distance
+        for (int row = 0; row < d.length; row++) {
+            for(int column = 0; column < d[0].length; column++) {
+                d[row][column] = ((int)Math.pow(this.velocity[row], 2) * Math.sin(2 * Math.toRadians(this.degree[column]))) / 9.8;
+            }
+        }
+    }
+    
+     void printStatement() { //format how the arrays will be printed
+        for (int row = 0; row < d.length; row++) {
+            System.out.printf("%6d", this.velocity[row]);
+            for(int column = 0; column < d[0].length; column++) {
+                System.out.printf("%17.2f", d[row][column]);
+            }
+            System.out.printf("\n");
+        }
+    }
+}
