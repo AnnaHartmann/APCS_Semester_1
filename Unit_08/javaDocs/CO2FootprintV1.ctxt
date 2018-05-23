@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=CO2FootprintV1
+comment0.text=\r\n\ The\ purpose\ of\ this\ program\ is\ to\ create\ the\ variables\ needed\ so\ I\ can\ print\ the\ correct\ output\ in\ the\ tester\ program.\ \r\n\ It\ initliazes\ variables\ used\ along\ with\ the\ mathmatical\ algorithms\ needed\ to\ solve\ for\ the\ tons\ to\ lbs\ and\ gallons\ to\ tons.\ \r\n\ I\ use\ constructors,\ methods,\ mathmatical\ algorithms\ along\ with\ javadocs\ as\ parts\ of\ my\ comments.\ \r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 12/1/17\r\n
+comment1.params=gallons
+comment1.target=CO2FootprintV1(double)
+comment2.params=
+comment2.target=double\ refCO2T()
+comment3.params=
+comment3.target=double\ refCO2L()
+comment4.params=
+comment4.target=void\ calculateCO2Tons()
+comment5.params=
+comment5.target=void\ calculateCO2TonsToLbs()
+numComments=6

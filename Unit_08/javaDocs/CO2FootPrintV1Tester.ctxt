@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=CO2FootPrintV1Tester
+comment0.text=\r\n\ This\ program\ is\ to\ print\ out\ the\ amount\ of\ gas\ in\ gallons\ that\ I\ used,\ then\ the\ amount\ of\ gas\ that\ I\ used\ in\ lbs\ and\ then\ to\ tons.\r\n\ This\ program\ used\ a\ static\ method\ (a\ standard\ one)\ and\ used\ printf\ statements\ for\ the\ output\ code.\r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 12/1/17\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
