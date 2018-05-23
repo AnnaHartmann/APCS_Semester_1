@@ -1,0 +1,36 @@
+/**
+ * This code is to calculate the average bill, price and the annual Emission that will be called in the CO2FromElectrictyTester code. 
+ *
+ * @author Annabel Hartmann
+ * @version 12/4/17
+ */
+
+import java.util.ArrayList;
+public class CO2FromElectricity {
+   private double annualEm;
+   
+   CO2FromElectricity(){ //Default Constructor
+   }
+
+   public double calcAverageBill(ArrayList<Double> monthlyBill){
+       double sum = 0; 
+       for(int i = 0 ; i < monthlyBill.size(); i++){
+            sum+= monthlyBill.get(i);
+       }
+       return sum/monthlyBill.size(); 
+   }
+
+   public double calcAveragePrice (ArrayList<Double> monthlyPrice){
+       double sum = 0; 
+       for(int i = 0 ; i < monthlyPrice.size(); i++){
+            sum+= monthlyPrice.get(i);
+       }
+       return sum/monthlyPrice.size(); 
+   }
+
+   public double calcElectricityCO2 (double avgBill, double avgPrice)
+   {
+        annualEm = (avgBill/avgPrice) * 1.37 * 12;
+        return annualEm;
+   }
+}
