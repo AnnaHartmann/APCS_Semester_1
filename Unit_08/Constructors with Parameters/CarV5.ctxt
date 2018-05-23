@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=CarV5
+comment0.text=\r\n\ This\ program\ is\ similar\ to\ the\ CarV3\ program\ except\ this\ code\ has\ the\ calculation\ of\ GPM\ (Gallons\ Per\ Mile)\ and\ the\ cost\ of\ the\ dirve.\r\n\ I\ did\ have\ som\ dillemmas\ with\ adding\ carType1,\ eMiles1,\ sMiles1,\ gUsed1,\ pPG1\ into\ the\ new\ carV5\ and\ with\ creating\ it\ so\ that\r\n\ public\ double\ totalCost\ has\ nothing\ in\ it's\ parenthesis.\ However\ I\ still\ made\ it\ functional.\ \r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 11/27/2017\r\n
+comment1.params=
+comment1.target=CarV5()
+comment2.params=eMiles\ sMiles
+comment2.target=int\ calcMileage(int,\ int)
+comment3.params=distance\ gUsed
+comment3.target=double\ calcMPG(double,\ double)
+comment4.params=gUsed\ distance
+comment4.target=double\ calcGPM(double,\ double)
+comment5.params=gUsed\ pPG
+comment5.target=double\ totalCost(double,\ double)
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7
