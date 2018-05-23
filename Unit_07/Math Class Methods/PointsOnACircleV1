@@ -1,0 +1,30 @@
+/**
+ * This code is meant to print out a sequence of (x, y) points using math language along with using for loops and printf statements. 
+ *
+ * @author Annabel Hartmann
+ * @version 11/7/17
+ */
+public class PointsOnACircleV1
+{
+ public static void main(String[] args) {
+     double[] x = { 1.0, 0.90, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, 0.20, 0.10, 0.00, -0.10, -0.20, -0.30, -0.40, -0.50, -0.60, -0.70,-0.80, -0.90, -1.00 }; //Int Array for x 
+     double r = 1.0; //Define what the radius is
+     double y1 = 0.00; //define y1
+     //prints the "header"
+     System.out.println("   Points on a Circle of Radius (1.0)");
+     System.out.println("     x1     x2           x1      y2");
+     System.out.println("~--------------------------------------~");
+     
+     for (int i = 0; i< 21; i++){ //loop for x,y
+         
+         double y = Math.sqrt((Math.pow(r, 2) - Math.pow(x[i], 2))); //math arithmetic for y1
+         if (y != 0.00) //this makes sure that -0.00 is not output
+            {
+                y1 = (-y);
+            }
+         System.out.printf("%8.2f   %.2f       %6.2f   %5.2f %n", x[i], y, x[i],     y1);
+         
+        }
+
+    }
+}
