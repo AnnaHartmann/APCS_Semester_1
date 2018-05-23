@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Catapult
+comment0.text=\r\n\ This\ class\ is\ meant\ to\ initliaze\ the\ array\ variables\ for\ velocity\ and\ degree,\ calculate\ the\ distance\ using\ .sin\ and\ .toRadians\ along\ with\ \r\n\ create\ how\ the\ array\ information\ will\ be\ printed.\ \r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 12/14/17\r\n
+comment1.params=velocity\ degree
+comment1.target=Catapult(int[],\ int[])
+comment2.params=
+comment2.target=void\ calculateDistance()
+comment3.params=
+comment3.target=void\ printStatement()
+numComments=4

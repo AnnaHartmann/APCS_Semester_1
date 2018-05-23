@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=CatapultTester
+comment0.text=\r\n\ This\ is\ program\ is\ meant\ to\ specify\ the\ velocity\ and\ degree\ variables\ along\ with\ assigning\ the\ variables\ to\ what\ is\ calculated\ in\ the\ Catapult\ program.\r\n\ This\ code\ also\ prints\ what\ is\ needed\ before\ and\ after\ the\ code\ along\ with\ a\ happy\ message\ at\ the\ end\!\r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 12/14/17\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
