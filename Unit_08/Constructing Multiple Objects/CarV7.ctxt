@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=CarV7
+comment0.text=\r\n\ This\ program\ is\ the\ section\ of\ the\ code\ from\ CarV5\ that\ did\ all\ the\ calcuations\ for\ the\ Mileage,\ MPG,\ GPM\ and\ total\ cost\ of\ the\ trip.\ \r\n\r\n\ @author\ Annabel\ Hartmann\r\n\ @version\ 11/29/2017\r\n
+comment1.params=
+comment1.target=CarV7()
+comment2.params=eMiles\ sMiles
+comment2.target=int\ calcMileage(int,\ int)
+comment3.params=distance\ gUsed
+comment3.target=double\ calcMPG(double,\ double)
+comment4.params=gUsed\ distance
+comment4.target=double\ calcGPM(double,\ double)
+comment5.params=gUsed\ pPG
+comment5.target=double\ totalCost(double,\ double)
+numComments=6
