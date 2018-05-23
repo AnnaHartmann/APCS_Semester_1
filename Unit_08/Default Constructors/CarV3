@@ -1,0 +1,63 @@
+/**
+ * This program is to show the type of car, miles per gallon, cost of the drive, price per gallon, gallons used, distance amd the start and end mileage. 
+ * This program uses constructors, static methods, a main method and printf statements.
+ *
+ * @author Annabel Hartmann
+ * @version 11/26/2017
+ */
+public class CarV3{
+    double driveCost;
+    double mPG;
+    double gUsed;
+    double pPG;
+    static double distance;
+    int eMiles;
+    int sMiles;
+    
+public CarV3() { } //default constructor
+        
+
+    public double calcMileage(double sMiles, double eMiles){ //calculate the distance between the start and end miles
+        distance = eMiles - sMiles;
+        return distance;
+    }
+
+
+    public double calcMPG(double distance, double gUsed){ //calculate the miles per gallon
+        return distance / gUsed; 
+
+
+    }
+  
+    public double calcPrice(double gUsed, double pPG) { //calculate the price of the gallons of gas used
+        double cost = (gUsed * pPG);
+        return cost;
+      
+    }
+    
+    public static void main(String[] args) {
+        
+        double gUsed = 25.2;
+        double pPG =  2.79;
+        int sMiles = 90084;
+        int eMiles = 90491;
+        double distance;
+        double cost;
+        double mpg;
+        double gpm;
+        
+        String carType = "2015 GM SUBURBAN";
+        
+        CarV3 car1 = new CarV3();
+        distance = car1.calcMileage(sMiles, eMiles);
+        mpg = car1.calcMPG(distance, gUsed);
+        cost = car1.calcPrice(gUsed, pPG);
+        
+        System.out.println("                                       Gas Mileage Calculations                     ");
+        System.out.println("");
+        System.out.println("     Type of Car         Start Miles   End Miles   Distance   Gallons   Price   Cost   Miles/Gal   ");
+        System.out.println("~-------------------------------------------------------------------------------------------------~");
+        System.out.printf("   %3s %12d %12d        %.0f       %.1f     %.2f %7.1f %8.1f ", carType, sMiles, eMiles, distance, gUsed, pPG, cost, mpg );
+
+    }
+}
