@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Ex1 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System. in );
+        System.out.print("Please enter the height of the box: ");
+        int x = input.nextInt();
+
+        System.out.println("Please enter a width for the box: ");
+        int y = input.nextInt();
+        drawbox(x, y);
+
+    }
+
+static void drawbox(int x, int y) {
+    for (int i = 0; i < y; i++) {
+        System.out.print("*");
+    }
+    System.out.println();
+    for (int i = 0; i < x - 2; i++) {
+        System.out.print("*");
+        for (int j = 0; j < y - 2; j++) {
+            System.out.print(" ");
+        }
+        System.out.println("*");
+    }
+    for (int i = 0; i < y; i++) {
+        System.out.print("*");
+    }
+    System.out.println();
+}
+
+            }
