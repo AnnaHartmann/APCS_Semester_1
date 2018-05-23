@@ -1,0 +1,112 @@
+/**
+ * This program is to reference all the variables that were initalized and to calculate waste emission (net and not net) and the amount of waste recycled along wtih
+ * gas, electricity used and the bulbs replaced. 
+ *
+ * @author Annabel Hartmann
+ * @version 12/6/17
+ */
+
+import java.util.ArrayList;
+public class CO2Footprint {
+   //List of ints, doubles, booleans initialized 
+   private int numOfBulbs, numOfPeople;
+   
+   private double pPKWH;
+   private double monthlyBill;
+   private double gUsed, grossWasteEmission, wasteReduction, netWasteEmission;
+    
+   private boolean rcycPaper, rcycPlastic, rcycGlass, rcycCans;
+   
+   //all the initialized variables created into an array
+   public CO2Footprint(double gallonsUsed, double priceOfKWH, double bill, int people, boolean paper, boolean plastic, boolean glass, boolean cans, int bulbs) {
+       gUsed = gallonsUsed;
+       pPKWH = priceOfKWH;
+       monthlyBill = bill;
+       numOfPeople = people;
+       rcycPaper = paper;
+       rcycPlastic = plastic;
+       rcycGlass = glass;
+       rcycCans = cans;
+       numOfBulbs = bulbs;
+        
+   }
+   
+   public int getNumberOfPeople() { //reference the # of People
+        return numOfPeople;
+   }
+   
+   public double getGallonsUsed() { //reference the gallons used
+        return gUsed;
+    }
+
+   public double getGrossWasteEmission() { //reference waste emission
+        return grossWasteEmission;
+   }
+    
+   public double getWasteReduction() { //reference reference waste reduction
+        return wasteReduction;
+   }
+    
+   public double getNetWasteEmission() { //reference netwaste emission
+        return netWasteEmission;
+   }
+   
+   public boolean getRecyclingPaper() { //reference recycled paper
+        return rcycPaper;
+   }
+
+   public boolean getRecyclingPlastic() { //reference recycled plastic
+        return rcycPlastic;
+   }
+
+   public boolean getRecyclingGlass() { //reference recycled glass
+        return rcycGlass;
+   }
+
+   public boolean getRecyclingCans() { //reference recycled cans
+        return rcycCans;
+    }
+   
+   public double calcPoundsCO2FromGas() { //calculate lbs of CO2 from the amount of gas used
+        return gUsed * 8.78E-3 * 2000;
+   }
+   
+   public double calcElectricityCO2() { //calculate the CO2 from Electricity
+        return monthlyBill / pPKWH * 1.37 * 12;
+   }
+   
+   public double calcGrossWasteEmission() { //calculate gross waste emission
+        return grossWasteEmission = (numOfPeople * 1018);
+   }
+   
+   public double calcWasteReduction() { //calculate waste reduction
+        wasteReduction = 0;
+        if (rcycPaper) {
+            wasteReduction += (numOfPeople * 184);
+        }
+
+        if (rcycPlastic) {
+            wasteReduction += (numOfPeople * 25.6);
+        }
+
+        if(rcycGlass){
+            wasteReduction += (numOfPeople * 46.6);
+        }
+        
+        if(rcycCans){
+            wasteReduction += (numOfPeople * 165.8);
+        }
+        return wasteReduction;
+   }
+   
+   public double calcBulbReduction() { //calculate number of bulb reduction
+        return ((double) numOfBulbs * 1.37 * 73);
+   }
+    
+   public double calcNetWasteEmission(){
+        calcGrossWasteEmission();
+        calcWasteReduction();
+        netWasteEmission = grossWasteEmission - wasteReduction;
+        return netWasteEmission;
+   }
+}
