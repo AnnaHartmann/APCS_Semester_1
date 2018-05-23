@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=ShapesV2
+comment0.text=\r\n\ The\ purpose\ of\ this\ program\ is\ to\ calculate\ the\ hypoteneuse\r\n\ of\ a\ triangle\ and\ its\ area.\ \ All\ calculations\ are\ done\ within\r\n\ static\ methods\ which\ are\ invoked\ from\ the\ main\ method.\r\n\ \r\n\ \u00A9FLVS\ 2007\r\n\ @author\ B.\ Jordan\ \r\n\ @version\ 5/20/07\r\n\ Lesson\:\ 08.03\r\n
+comment1.params=s1\ s2
+comment1.target=double\ calcTriArea(int,\ int)
+comment2.params=s1\ s2
+comment2.target=double\ calcHypoteneuse(int,\ int)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=MeasurementConverterV3
+comment0.text=\r\n\ The\ purpose\ of\ this\ program\ is\ to\ demonstrate\ Object\ Oriented\ Programming.\r\n\ A\ default\ constructor\ is\ defined\ to\ create\ an\ object\ and\ methods\ are\ called\r\n\ on\ the\ object.\r\n\r\n\ \u00A9FLVS\ 2007\r\n\ @author\ B.\ Jordan\ \r\n\ @version\ 05/25/07\r\n\ Lesson\:\ 08.03\r\n
+comment1.params=
+comment1.target=MeasurementConverterV3()
+comment2.params=
+comment2.target=void\ printPurpose()
+comment3.params=ft
+comment3.target=double\ convertFeetToMiles(double)
+comment4.params=mi
+comment4.target=double\ convertMilesToFeet(double)
+comment5.params=mi
+comment5.target=double\ convertMilesToKilometers(double)
+comment6.params=km
+comment6.target=double\ convertKilometersToMiles(double)
+comment7.params=lb
+comment7.target=double\ convertPoundsToKilograms(double)
+comment8.params=kg
+comment8.target=double\ convertKilogramsToPounds(double)
+comment9.params=args
+comment9.target=void\ main(java.lang.String[])
+numComments=10

@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ShapesV4
+comment0.text=\r\n\ The\ purpose\ of\ this\ project\ is\ to\ find\ the\ area,\ preimeter\ of\ a\ rectangle\ and\ circumfrence\ of\ a\ circle.\r\n\ \r\n\ \u00A9FLVS\ 2007\r\n\ @author\ Annabel\ Hartmann\ \r\n\ @version\ 11/20/17\r\n
+comment1.params=
+comment1.target=ShapesV4()
+comment2.params=s1\ s2
+comment2.target=double\ calcTriArea(int,\ int)
+comment3.params=s1\ s2
+comment3.target=double\ calcHypoteneuse(int,\ int)
+comment4.params=w\ l
+comment4.target=double\ calcRectArea(int,\ int)
+comment5.params=w\ l
+comment5.target=double\ calcRectPerimeter(int,\ int)
+comment6.params=r
+comment6.target=double\ calcCircCircumference(int)
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8
