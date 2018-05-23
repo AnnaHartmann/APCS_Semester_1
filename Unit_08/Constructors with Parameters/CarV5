@@ -1,0 +1,54 @@
+/**
+ * This program is similar to the CarV3 program except this code has the calculation of GPM (Gallons Per Mile) and the cost of the dirve.
+ * I did have som dillemmas with adding carType1, eMiles1, sMiles1, gUsed1, pPG1 into the new carV5 and with creating it so that
+ * public double totalCost has nothing in it's parenthesis. However I still made it functional. 
+ *
+ * @author Annabel Hartmann
+ * @version 11/27/2017
+ */
+public class CarV5{
+    double driveCost, mPG, gUsed, pPG, distance;
+    int eMiles, sMiles;
+    
+    public CarV5() { //default constructor
+    } 
+        
+    public int calcMileage( int eMiles, int sMiles){ //calculate the distance between the start and end miles
+        return eMiles - sMiles;
+    }
+    
+    public double calcMPG(double distance, double gUsed){ //calculate the miles per gallon
+        return distance / gUsed; 
+    }
+    
+    public double calcGPM(double gUsed, double distance){ //calculate the miles per gallon
+        return gUsed / distance; 
+    }
+  
+    public double totalCost(double gUsed, double pPG) { //calculate the price of the gallons of gas used
+        return gUsed * pPG;
+    } //When the total cost is printed it will print 0.0 unless I add double gUsed and double pPG
+    
+    public static void main(String[] args) {
+        
+        String carType1 = "2015 GM SUBURBAN";
+        int sMiles1 = 90084;
+        int eMiles1 = 90491;
+        double gUsed1 = 12.2;
+        double pPG1 =  2.79;
+       
+        CarV5 car1 = new CarV5(); // unsure why I have errors when adding carType1, eMiles1, sMiles1, gUsed1, pPG1 inside the parenthesis 
+        
+        int distance1 = car1.calcMileage(eMiles1, sMiles1);
+        double mpg = car1.calcMPG(distance1, gUsed1);
+        double cost1 = car1.totalCost(gUsed1, pPG1);
+        double gpm = car1.calcGPM(gUsed1, distance1);
+        
+        System.out.println("                                       Gas Mileage Calculations                     ");
+        System.out.println("");
+        System.out.println("     Type of Car         Start Miles   End Miles   Distance   Gallons   Price   Cost   Miles/Gal  Gallons/Mi");
+        System.out.println("~---------------------------------------------------------------------------------------------------------------~");
+        System.out.printf("   %3s %12d %12d        %d       %.1f     %.2f %7.1f %8.1f %11.2f", carType1, sMiles1, eMiles1, distance1, gUsed1, pPG1, cost1, mpg, gpm);
+
+    }
+}
