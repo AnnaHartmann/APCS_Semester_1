@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GravityV1
+comment1.params=kg\ km
+comment1.target=double[]\ gResult(double[],\ double[])
+comment2.params=planet\ diameter\ mass\ force
+comment2.target=void\ outputR(java.lang.String[],\ double[],\ double[],\ double[])
+comment3.params=gForce
+comment3.target=void\ tableData(double[])
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
