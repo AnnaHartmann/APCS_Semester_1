@@ -1,0 +1,89 @@
+/**
+ * This code is the calculation and calling of the amount of people, waste emission, net emission amd reduction along with the different types of waste that can be
+ * recycled. 
+ *
+ * @author Annabel Hartmann
+ * @version 12/5/17
+ */
+public class CO2FromWaste {
+    
+    private int numOfPeople;
+    private double grossWasteEmission;
+    private double wasteReduction;
+    private double netWasteEmission;
+
+    private boolean rcycPaper;
+    private boolean rcycPlastic;
+    private boolean rcycGlass;
+    private boolean rcycCans;
+    
+    public CO2FromWaste(int people, boolean paper, boolean plastic, boolean glass, boolean cans) {
+        numOfPeople = people;
+        rcycPaper = paper;
+        rcycPlastic = plastic;
+        rcycGlass = glass;
+        rcycCans = cans;
+        
+    }
+
+    public void calcGrossWasteEmission() {
+        grossWasteEmission = (numOfPeople * 1018);
+    }
+
+    public void calcWasteReduction() {
+        wasteReduction = 0;
+        if (rcycPaper) {
+            wasteReduction += (numOfPeople * 184);
+        }
+
+        if (rcycPlastic) {
+            wasteReduction += (numOfPeople * 25.6);
+        }
+
+        if(rcycGlass){
+            wasteReduction += (numOfPeople * 46.6);
+        }
+        
+        if(rcycCans){
+            wasteReduction += (numOfPeople * 165.8);
+        }
+    }
+    
+    public void calcNetWasteEmission(){
+        calcGrossWasteEmission();
+        calcWasteReduction();
+        netWasteEmission = grossWasteEmission - wasteReduction;
+    }
+    
+    public int getNumberOfPeople() {
+        return numOfPeople;
+    }
+
+    public boolean getRecyclingPaper() {
+        return rcycPaper;
+    }
+
+    public boolean getRecyclingPlastic() {
+        return rcycPlastic;
+    }
+
+    public boolean getRecyclingGlass() {
+        return rcycGlass;
+    }
+
+    public boolean getRecyclingCans() {
+        return rcycCans;
+    }
+
+        public double getGrossWasteEmission() {
+        return grossWasteEmission;
+    }
+    
+    public double getWasteReduction() {
+        return wasteReduction;
+    }
+    
+    public double getNetWasteEmission() {
+        return netWasteEmission;
+    }
+}
