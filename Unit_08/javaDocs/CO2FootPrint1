@@ -1,0 +1,44 @@
+/**
+ * The purpose of this program is to create the variables needed so I can print the correct output in the tester program. 
+ * It initliazes variables used along with the mathmatical algorithms needed to solve for the tons to lbs and gallons to tons. 
+ * I use constructors, methods, mathmatical algorithms along with javadocs as parts of my comments. 
+ *
+ * @author Annabel Hartmann
+ * @version 12/1/17
+ */
+
+public class CO2FootprintV1
+{
+    public double gUsed, cO2Tons, cO2lbs; //initialize the variables for the amounts of gas used, the amount of CO2 used in tons and lbs
+    
+    // Constructor for CO2Footprint
+    // the double variable for gallons is the reference to gUsed;
+    CO2FootprintV1 (double gallons){ 
+        gUsed = gallons;
+    }
+    
+    //Method, references the the tons of CO2 used
+    // @return this returns the double variable of the tons of CO2
+    public double refCO2T (){ 
+        return cO2Tons;
+    }
+    
+    //Method, references the CO2 use in lbs
+    //@return this returns the double variable referenced in lbs of CO2 used
+    public double refCO2L (){ 
+        return cO2lbs;
+    }
+    
+    //Method, this method is to calculate the tons of CO2 from the gallons used
+    // The function for this is the amount of gas used * 8.78 * 10^-3 
+    public void calculateCO2Tons (){
+        cO2Tons = gUsed  * (8.78 * Math.pow(10, -3));
+    }
+    
+    //Method, this method is to take the tons that were found in the previous method and convert them into lbs
+    //The function for this is the tons of CO2 * 2000;
+    public void calculateCO2TonsToLbs (){ 
+        cO2lbs = (cO2Tons * 2000);
+    }
+    
+}
