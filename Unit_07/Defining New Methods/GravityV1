@@ -1,0 +1,52 @@
+/**
+ * The purpose for this code is so that I can use methods printf so I can calculate the surface gravity and display the mass and diameter of each planet. 
+ *
+ * @author Annabel Hartmann
+ * @version 11/9/17
+ */
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.File;
+public class GravityV1 {
+    public static double[] gResult( double []kg, double[]km) {//Calcuating Diameter and Mass
+        double G = 6.67*Math.pow(10,-11);
+        double []gResultant= new double[9];
+        for(int a = 0; a < gResultant.length;a++)
+        {
+            gResultant[a] = ((G * kg[a]) / (Math.pow(km[a]/2,2)));
+        }
+        return gResultant;
+    }
+    
+    public static void outputR(String [] planet, double [] diameter, double [] mass, double[]force) {// Displaying planet , diameters, mass and force   
+        System.out.printf("%44s\n","⋆Planet Data⋆");
+        System.out.printf("%12s %20s %15s %15s\n","~Planet~","~Diameter (Km)~","~Mass (Kg)~","~g (m/s^2)~");
+        System.out.println("⋆+-------------------------------------------------------------------+⋆");
+        for(int b = 0; b < 9; b++)
+        {
+            System.out.printf("    %-16s %-16.0f %7.2e      %10.2f\n",planet[b],diameter[b], mass[b],force[b]);
+        }
+    }
+    
+    public static void tableData(double[] gForce)throws IOException {//Displaying the appropriate measurements 
+       PrintWriter outF = new PrintWriter(new File("gravity1.txt"));
+       double []resultGravity = gForce; 
+       for(int c = 0; c < resultGravity.length;c++)
+       {
+           outF.println(resultGravity[c]);
+       }
+       outF.close();
+    }
+    
+    public static void main(String[]args) throws IOException { //Displays the table for the planets and all other information
+        String [] planet = {"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "*Pluto"};
+        double [] kg = {3.30E23,4.869E24,5.972E24,6.4219E23,1.900E27,5.68E26,8.683E25,1.0247E26,1.27E22};
+        double [] km = {4880000,12103600,12756300,6794000,142984000,120536000,51118000,49532000,2274000};
+        double [] diameter = {4880,12103.6,12756.3,6794,142984,120536,51118,49532,2274 };
+        double [] fGravity = gResult(kg, km);
+        outputR(planet, diameter, kg, fGravity);
+        tableData(fGravity);
+        System.out.println();
+        System.out.println("*I added Pluto because they have feelings too!");
+    }
+}
